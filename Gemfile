@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'devise', '~> 3.5.1'
+
 # Errors notification & errors handling
 gem "binding_of_caller", group: :development
 gem "better_errors", group: :development
