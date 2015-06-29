@@ -1,4 +1,6 @@
 class Api::V1::UsersController < ApplicationController
+  before_action :authenticate_with_token!, only: [:show]
+
   def show
     user = User.find(params[:id])
     render json: user.decorate.user_info
@@ -8,7 +10,7 @@ class Api::V1::UsersController < ApplicationController
     user = User.new(users_params)
 
     if user.save
-      render json: user
+      render json: user.decorate.user_info
     else
       render json: { errors: user.errors }
     end

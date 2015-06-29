@@ -3,7 +3,7 @@ class UserDecorator < Draper::Decorator
 
   def user_info
     as_json(
-      only: [:id, :email]
+      only: [:id, :email, :auth_token]
       )
   end
 end

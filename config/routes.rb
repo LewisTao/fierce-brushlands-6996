@@ -5,6 +5,7 @@ News::Application.routes.draw do
     namespace :v1 do
  		resources :authors
     resources :users, only: [:show, :create]
+    resources :sessions, only: [:create, :destroy]
     end
   end
 end
