@@ -1,5 +1,6 @@
 class Api::V1::UsersController < ApplicationController
   before_action :authenticate_with_token!, only: [:show]
+  before_action :doorkeeper_authorize!
 
   def show
     user = User.find(params[:id])

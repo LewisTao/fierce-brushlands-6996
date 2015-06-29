@@ -1,4 +1,5 @@
 News::Application.routes.draw do
+  use_doorkeeper
   devise_for :users
 
   namespace :api, defaults: { format: :json }, path: '/' do

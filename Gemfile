@@ -1,5 +1,12 @@
 source 'https://rubygems.org'
 
+# Facebook login
+gem 'omniauth', '~> 1.2.2'
+gem 'omniauth-facebook', '~> 2.0.1'
+
+# For Oauth
+gem 'doorkeeper', '~> 2.2.1'
+
 gem 'devise', '~> 3.5.1'
 
 # Errors notification & errors handling
